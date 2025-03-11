@@ -1,7 +1,6 @@
-import React from 'react'
+import React from "react";
 
-export const Meeting = () => {
-  return (
-    <div>Meeting</div>
-  )
-}
+const Meeting = () => {
+  return <div>Meeting</div>;
+};
+export default Meeting;
