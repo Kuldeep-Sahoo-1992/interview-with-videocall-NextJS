@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import "@stream-io/video-react-sdk/dist/css/styles.css";
 import "./globals.css";
-import { ClerkProvider, RedirectToSignIn, SignedIn, SignedOut } from "@clerk/nextjs";
+import {
+  ClerkProvider,
+  RedirectToSignIn,
+  SignedIn,
+  SignedOut,
+} from "@clerk/nextjs";
 import ConvexClientProvider from "@/components/provider/ConvexClientProvider";
 import { ThemeProvider } from "@/components/provider/theme-provider";
 import Navbar from "@/components/Navbar";
-
+import { Toaster } from "react-hot-toast";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -49,6 +55,7 @@ export default function RootLayout({
               <RedirectToSignIn />
             </SignedOut>
           </ThemeProvider>
+          <Toaster />
         </body>
       </html>
     </ConvexClientProvider>

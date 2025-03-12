@@ -4,7 +4,7 @@ export default defineSchema({
   users: defineTable({
     name: v.string(),
     email: v.string(),
-    image: v.optional(v.string()),
+    image: v.optional(v.string()), 
     role: v.union(v.literal("candidate"), v.literal("interviewer")),
     clerkId: v.string(),
   }).index("by_clerkId", ["clerkId"]),
@@ -29,4 +29,3 @@ export default defineSchema({
     interviewId: v.string(),
   }).index("by_interview_id", ["interviewId"]),
 });
-
