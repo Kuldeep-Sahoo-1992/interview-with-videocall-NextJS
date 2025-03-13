@@ -49,7 +49,7 @@ export const createInterview = mutation({
     status: v.string(),
     streamCallId: v.string(),
     candidateId: v.string(),
-    interviewerId: v.array(v.string()),
+    interviewerIds: v.array(v.string()),
   },
   handler: async (ctx, args) => {
     const identity = await ctx.auth.getUserIdentity();

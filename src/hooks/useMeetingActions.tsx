@@ -32,7 +32,7 @@ const useMeetingActions = () => {
     if (!client) {
       return toast.error("Faildes to join meeting. Please try again.");
     }
-    router.push(`/meeting/${callID}`);
+    router.push(`/meetings/${callID}`);
   };
 
   return { createInstantMeetings, joinMeeting };
